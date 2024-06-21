@@ -2,22 +2,22 @@ package models;
 
 public class User {
 	private int id;
-	private String nom, prenom, login, password;
+	private String lastname, firstname, login, password;
 
 	public User() {
 
 	}
 
-	public User(int id, String nom, String prenom, String login, String password) {
+	public User(int id, String lastname, String firstname, String login, String password) {
 		this.id = id;
-		this.nom = nom;
-		this.prenom = prenom;
+		this.lastname = lastname;
+		this.firstname = firstname;
 		this.login = login;
 		this.password = password;
 	}
 
-	public User(String nom, String prenom, String login, String password) {
-		this(0, nom, prenom, login, password);
+	public User(String lastname, String firstname, String login, String password) {
+		this(0, lastname, firstname, login, password);
 	}
 
 	public int getId() {
@@ -28,20 +28,20 @@ public class User {
 		this.id = id;
 	}
 
-	public String getNom() {
-		return nom;
+	public String getLastname() {
+		return lastname;
 	}
 
-	public void setNom(String nom) {
-		this.nom = nom;
+	public void setLastname(String lastname) {
+		this.lastname = lastname;
 	}
 
-	public String getPrenom() {
-		return prenom;
+	public String getLirstname() {
+		return firstname;
 	}
 
-	public void setPrenom(String prenom) {
-		this.prenom = prenom;
+	public void setFirstname(String firstname) {
+		this.firstname = firstname;
 	}
 
 	public String getLogin() {
@@ -62,7 +62,7 @@ public class User {
 
 	@Override
 	public String toString() {
-		return "Utilisateur [id=" + id + ", nom=" + nom + ", prenom=" + prenom + ", login=" + login + ", password="
+		return "User [id=" + id + ", lastname=" + lastname + ", firstname=" + firstname + ", login=" + login + ", password="
 				+ password + "]";
 	}
 }

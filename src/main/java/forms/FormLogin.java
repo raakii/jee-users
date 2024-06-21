@@ -7,29 +7,29 @@ import dao.UserDao;
 import models.User;
 
 public class FormLogin {
-	private String CHAMP_LOGIN = "login";
-	private String CHAMP_PASSWORD = "password";
+	private String LOGIN_FIELD = "login";
+	private String PASSWORD_FIELD = "password";
 
 	private boolean status;
 	private String statusMessage;
-	private User utilisateur;
+	private User user;
 	private HttpServletRequest request;
 	private String login;
-	private final String WRONG_PASSWORD = "Les mots de passe ne sont pas conformes";
+	private final String WRONG_PASSWORD = "The passwords are not the same";
 
 	public FormLogin(HttpServletRequest request) {
 		this.request = request;
 		this.status = false;
-		this.statusMessage = "echec";
+		this.statusMessage = "error";
 	}
 
 	public boolean login() {
-		String login = getParameter(CHAMP_LOGIN);
-		String password = getParameter(CHAMP_PASSWORD);
+		String login = getParameter(LOGIN_FIELD);
+		String password = getParameter(PASSWORD_FIELD);
 
-		User utilisateur = UserDao.getLogin(login);
+		User user = UserDao.getLogin(login);
 
-		if (utilisateur != null && utilisateur.getPassword().equals(password)) {
+		if (user != null && user.getPassword().equals(password)) {
 			status = true;
 			HttpSession session = request.getSession();
 			session.setAttribute("isConnected", true);
@@ -63,8 +63,8 @@ public class FormLogin {
 		this.statusMessage = statusMessage;
 	}
 
-	public User getUtilisateur() {
-		return utilisateur;
+	public User getuser() {
+		return user;
 	}
 
 	public Object getLogin() {
