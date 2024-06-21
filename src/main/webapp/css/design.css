@@ -1,0 +1,173 @@
+body
+{
+	margin: 0px;
+	padding: 0px;
+	overflow: hidden;
+}
+#entete, #menu, #pied, #corps
+{
+	width: 100%;
+	margin: 0px;
+}
+#entete, #menu, #pied, #menu li a
+{
+	color: white; /* Changer la couleur en blanc */
+	text-align: center;
+}
+#entete
+{
+	position: absolute;
+	height: 11%;
+	left: 0px;
+	top: 0px;
+	padding: 10px;
+	font-size: 3em;
+	text-transform: uppercase;
+	font-family: "Agency FB";
+	background-color: red; /* Changer la couleur de fond en vert */
+}
+#menu
+{
+	position: absolute;
+	height: 6%;
+	left: 0px;
+	top: 11%;
+	border-top: solid 2px white;
+	background-color: red; /* Changer la couleur de fond en vert */
+}
+#menu ul
+{
+	margin: 0px;
+	padding: 0px;
+	height: 100%;
+	margin: 0px;
+}
+#menu li
+{
+	display: inline-block;
+	border-left: solid 2px white;
+	padding: 10px;
+	height: 100%;
+}
+#menu li:last-child
+{
+	border-right: solid 2px white;
+}
+#menu li a
+{
+	text-decoration: none;
+	font-size: 1.2em;
+}
+#corps
+{
+	position: absolute;
+	height: 80%;
+	left: 0px;
+	top: 17%;
+	padding: 0px 5px;
+	overflow: auto;
+}
+#pied
+{
+	position: absolute;
+	height: 6%;
+	left: 0px;
+	top: 95%;
+	padding-top: 5px;
+	background-color: red; /* Changer la couleur de fond en vert */
+}
+#titre-principal
+{
+	text-align: center;
+	font-family: "Agency FB";
+}
+table, th, td
+{
+	border: solid 1px;
+	padding: 5px;
+}
+tr:first-child
+{
+	border: solid 1px red;
+	color: white;
+	background-color: black;
+}
+table
+{
+	width: fit-content;
+	margin: auto;
+	border-collapse: collapse;
+}
+form
+{
+	width: 50%;
+	margin: 20px auto; /* Centrer horizontalement et ajouter de la marge verticale */
+	border: solid 2px grey; /* Modifier la couleur de la bordure en gris */
+	padding: 10px;
+}
+.formItem
+{
+	text-align: center;
+}
+.formItem label
+{
+	margin: 15px;
+	display: inline-block;
+	width: 15%;
+	text-align: right;
+	font-size: 1.2em;
+}
+.formItem input[type="submit"]
+{
+	display: inline-block;
+	margin-top: 10px;
+	color: white;
+	width: 100px;
+	height: 30px;
+	background-color: black;
+	border: double 3px grey;
+}
+.messageBox
+{
+	width: 50%;
+	margin: auto;
+	padding-left: 20px;
+	padding-bottom: 20px;
+	font-size: 1.2em;
+}
+#statusMessage {
+	border-radius: 1px;
+	text-align: center;
+	width: 50%;
+	margin: auto;
+	font-size: 1.2em;
+}
+.succes
+{
+	color: green;
+	text-align: center;
+}
+.erreur
+{
+	color: red;
+}
+.formItem input {
+	height: 25px;
+	border-color: grey;
+	padding: block;
+	display: block;
+	width: 90%;
+	margin: auto;
+	text-align: center;
+}
+.formItem span {
+	display: block;
+}
+#statusMessage {
+	text-align: center;
+	margin: auto;
+}
+#auth {
+	text-align: center;
+	margin: auto;
+}
